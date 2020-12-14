@@ -8,7 +8,7 @@ namespace ChallengeOne.Repo
 {
     public class MenuContentRepo
     {
-        private List<MenuContent> _listOfMenuContent = new List<MenuContent>();
+        public List<MenuContent> _listOfMenuContent = new List<MenuContent>();
 
         //create
         public void AddContentToList(MenuContent content)
@@ -23,10 +23,10 @@ namespace ChallengeOne.Repo
         }
 
         //update
-        public bool UpdateExistingContent(string originalName, MenuContent newContent)
+        public bool UpdateExistingContent(string originalNumber, MenuContent newContent)
         {
             //Find Content
-            MenuContent oldContent = GetContentByName(originalName);
+            MenuContent oldContent = GetContentByName(originalNumber);
             //Update content
             if(oldContent != null)
             {
@@ -67,12 +67,24 @@ namespace ChallengeOne.Repo
 
         }
 
+        public MenuContent GetContentByID(int ID)
+        {
+            foreach (MenuContent item in _listOfMenuContent)
+            {
+                if(item.MealNumber == ID)
+                { 
+                    return item;
+                }
+            }
+            return null;
+        }
+
         //Helper-
-        public MenuContent GetContentByName(string name)
+        public MenuContent GetContentByName(string number)
         {
             foreach(MenuContent content in _listOfMenuContent)
             {
-                if(content.MealName == name)
+                if(content.MealNumber.ToString() == number)
                 {
                     return content;
                 }

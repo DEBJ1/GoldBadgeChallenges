@@ -10,7 +10,7 @@ namespace ChallengeTwo.Repo
     {
         
 
-        private Queue<ClaimContent> _claimQueue = new Queue<ClaimContent>();
+        public Queue<ClaimContent> _claimQueue = new Queue<ClaimContent>();
         
 
         //create
@@ -24,8 +24,18 @@ namespace ChallengeTwo.Repo
             return _claimQueue;
         }
 
-       //take care of (delete)
-       public bool RemoveClaim()
+
+    ///next 
+   
+    public Queue<ClaimContent> GetNextClaim()
+        {
+            return _claimQueue.Peek();
+        }
+
+
+
+        //take care of (delete)
+        public bool RemoveClaim()
         {
             ClaimContent content = _claimQueue.Peek();
             if (content == null)

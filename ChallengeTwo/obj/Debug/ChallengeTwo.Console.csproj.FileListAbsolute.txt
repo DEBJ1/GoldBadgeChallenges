@@ -1,0 +1,1 @@
+C:\ElevenFiftyProjects\GoldBadgeChallenges\ChallengeTwo\obj\Debug\ChallengeTwo.Console.csproj.CoreCompileInputs.cache

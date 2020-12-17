@@ -27,9 +27,13 @@ namespace ChallengeTwo.Repo
 
     ///next 
    
-    public Queue<ClaimContent> GetNextClaim()
+    public ClaimContent GetNextClaim()
         {
-            return _claimQueue.Peek();
+            if (_claimQueue.Count > 0)
+            {
+                return _claimQueue.Peek();
+            }
+            return null;
         }
 
 

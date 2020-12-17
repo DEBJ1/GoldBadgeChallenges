@@ -10,14 +10,12 @@ namespace ChallengeTwo
     class ProgramUI
     {
         private ClaimContentRepo _claimRepo = new ClaimContentRepo();
-
-        //start app
+              //start app
 
         public void Run()
         {
             SeedQueue();
             Menu();
-
         }
         //menu
         private void Menu()
@@ -30,7 +28,8 @@ namespace ChallengeTwo
                     "1. See all Claims\n" +
                     "2. Take Care of Next Claim\n" +
                     "3. Enter a New Claim\n" +
-                    "4. Exit Application");
+                    "4. Delete Claim\n" +
+                    "5. Exit");
 
                 string input = Console.ReadLine();
 
@@ -46,6 +45,9 @@ namespace ChallengeTwo
                         NewClaim();
                         break;
                     case "4":
+                        DeleteClaim();
+                        break;
+                    case "5":
                         Console.WriteLine("Goodbye");
                         keeprunning = false;
                         break;
@@ -66,35 +68,36 @@ namespace ChallengeTwo
             {
             Console.Clear();
 
-            Queue<ClaimContent> claimQueue = _claimRepo.GetClaimQueue();
-
-            foreach (ClaimContent content in claimQueue)
+            Queue<ClaimContent> claimPeek = _claimRepo.GetClaimQueue();
+            Console.WriteLine($"{ "ID",-25} {"Type",-25}{"Description",-25}{"Amount",-12}{"Date Of Claim",-27}{"IsValid",-25} ");
+            foreach (ClaimContent content in claimPeek)
             {
-                System.Console.WriteLine($"ID: {content.ClaimID},\n" +
-                  $"Type: {content.TypeOfClaim},\n" +
-                  $"Description: {content.Description},\n" +
-                  $"Amount: {content.ClaimAmount},\n" +
-                  $"Date: {content.DateOfIncident},\n" +
-                  $"IsValid: {content.IsValid}");
+                Console.WriteLine($" {content.ClaimID,-25} {content.TypeOfClaim,-25}{content.Description,-25}{"$" + content.ClaimAmount,-12}{content.DateOfIncident,-27}{content.IsValid,-23}");
+
             }
 
-           
+
             }
+
+           private void DisplayClaims(ClaimContent content)
+            {
+            Console.WriteLine($"{ "ID",-25} {"Type",-25}{"Description",-25}{"Amount",-12}{"Date Of Claim",-27}{"IsValid",-25} ");
+            Console.WriteLine($" {content.ClaimID,-25} {content.TypeOfClaim,-25}{content.Description,-25}{"$" + content.ClaimAmount,-12}{content.DateOfIncident,-27}{content.IsValid,-23}");
+             }
+
 
             private void NextClaim()
             {
             Console.Clear();
 
-            Queue<ClaimContent> claimPeek = _claimRepo.GetNextClaim();
-            Console.WriteLine($"{ "ID",-25} {"Type", -25}{"Description",-25}{"Amount",-12}{"Date Of Claim",-27}{"IsValid",-25} ");
-            foreach (ClaimContent content in claimPeek)
+            ClaimContent contents = _claimRepo.GetNextClaim();
+            if (contents != null)
             {
-                Console.WriteLine($" {content.ClaimID, -25} {content.TypeOfClaim,-25}{content.Description,-25}{content.ClaimAmount,-12}{content.DateOfIncident,-27}{content.IsValid,-25}");
 
-
+                DisplayClaims(contents);
             }
-
-        }
+            
+             }
             private void NewClaim()
             {
             Console.Clear();
@@ -133,11 +136,39 @@ namespace ChallengeTwo
             _claimRepo.AddClaimToQueue(newContent);
         }
        
+
+        private void DeleteClaim()
+        {
+           
+            NextClaim();
+            Console.WriteLine("Do you want to delete this Claim? y/n");
+
+            string input = Console.ReadLine().ToLower();
+            switch (input)
+            {
+                case "y":
+                    _claimRepo.RemoveClaim();
+                    Console.WriteLine("Claim deleted");
+                    break;
+                        case "n":
+                    Console.WriteLine("Claim not deleted");
+                    break;
+
+            }
+           
+            
+
+        }
         public void SeedQueue()
         {
             ClaimContent car = new ClaimContent(1, ClaimType.Car, "Car accident on 464.", 400, new DateTime(2018/4/25), true );
+            ClaimContent home = new ClaimContent(2, ClaimType.Home, "House Fire in Kitchen", 4000, new DateTime(2018 / 4 / 11), false);
+            ClaimContent theft = new ClaimContent(3, ClaimType.Theft, "Stolen Pancakes", 4, new DateTime(2018 / 4 / 27), true);
+
 
             _claimRepo.AddClaimToQueue(car);
+            _claimRepo.AddClaimToQueue(home);
+            _claimRepo.AddClaimToQueue(theft);
         }
     }
 }

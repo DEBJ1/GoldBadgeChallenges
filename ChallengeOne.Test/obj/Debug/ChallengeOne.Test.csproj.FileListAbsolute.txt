@@ -1,0 +1,16 @@
+C:\Users\14bal\source\repos\GoldBadgeChallenges\ChallengeOne.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\14bal\source\repos\GoldBadgeChallenges\ChallengeOne.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\14bal\source\repos\GoldBadgeChallenges\ChallengeOne.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\14bal\source\repos\GoldBadgeChallenges\ChallengeOne.Test\bin\Debug\ChallengeOne.Test.dll
+C:\Users\14bal\source\repos\GoldBadgeChallenges\ChallengeOne.Test\bin\Debug\ChallengeOne.Test.pdb
+C:\Users\14bal\source\repos\GoldBadgeChallenges\ChallengeOne.Test\bin\Debug\ChallengeOne.Repo.dll
+C:\Users\14bal\source\repos\GoldBadgeChallenges\ChallengeOne.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\14bal\source\repos\GoldBadgeChallenges\ChallengeOne.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\14bal\source\repos\GoldBadgeChallenges\ChallengeOne.Test\bin\Debug\ChallengeOne.Repo.pdb
+C:\Users\14bal\source\repos\GoldBadgeChallenges\ChallengeOne.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\14bal\source\repos\GoldBadgeChallenges\ChallengeOne.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\14bal\source\repos\GoldBadgeChallenges\ChallengeOne.Test\obj\Debug\ChallengeOne.Test.csprojAssemblyReference.cache
+C:\Users\14bal\source\repos\GoldBadgeChallenges\ChallengeOne.Test\obj\Debug\ChallengeOne.Test.csproj.CoreCompileInputs.cache
+C:\Users\14bal\source\repos\GoldBadgeChallenges\ChallengeOne.Test\obj\Debug\ChallengeOne.Test.csproj.CopyComplete
+C:\Users\14bal\source\repos\GoldBadgeChallenges\ChallengeOne.Test\obj\Debug\ChallengeOne.Test.dll
+C:\Users\14bal\source\repos\GoldBadgeChallenges\ChallengeOne.Test\obj\Debug\ChallengeOne.Test.pdb

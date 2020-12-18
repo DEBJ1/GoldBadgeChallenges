@@ -9,7 +9,7 @@ namespace ChallengeThree.Repo
     public class BadgeContent
     {
         public int BadgeID { get; set; }
-        public List<string> DoorNames { get; set; }
+        public List<string> DoorNames { get; set; } = new List<string>();
 
         public BadgeContent () { }
         public BadgeContent(int badgeID, List<string> doorNames)

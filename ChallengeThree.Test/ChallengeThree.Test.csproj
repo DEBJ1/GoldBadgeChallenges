@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{034F2527-64C2-4C6C-BD4B-5F539DF5D4B5}</ProjectGuid>
+    <ProjectGuid>{7E8E13FB-0B8A-4D79-B7B0-E5B68921BCB3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ChallengeTwo.Test</RootNamespace>
-    <AssemblyName>ChallengeTwo.Test</AssemblyName>
+    <RootNamespace>ChallengeThree.Test</RootNamespace>
+    <AssemblyName>ChallengeThree.Test</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -49,20 +49,20 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="ChallengeThreeRepotest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ChallengeTwo.Repo\ChallengeTwo.Repo.csproj">
-      <Project>{ebf17649-2514-482e-bd0d-b9f170a4e1d1}</Project>
-      <Name>ChallengeTwo.Repo</Name>
+    <ProjectReference Include="..\ChallengeThree.Repo\ChallengeThree.Repo.csproj">
+      <Project>{d36e16c6-9831-4fd3-a64f-c2de7c93d490}</Project>
+      <Name>ChallengeThree.Repo</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ChallengeTwo\ChallengeTwo.Console.csproj">
-      <Project>{8c986059-13ac-46ba-90e0-0808dd89e9c4}</Project>
-      <Name>ChallengeTwo.Console</Name>
+    <ProjectReference Include="..\ChallengeThree\ChallengeThree.Console.csproj">
+      <Project>{39e74343-9bc8-4bae-85ac-b633c92f248c}</Project>
+      <Name>ChallengeThree.Console</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace ChallengeThree.Repo
 {
-    class BadgeRepo
+    public class BadgeRepo
     {
         private readonly Dictionary<int, BadgeContent> _badgeDict = new Dictionary<int, BadgeContent>();
-
+        int Count;
         //create
         public void AddBadgetoDict(BadgeContent badge)
         {
-
+            Count++;
+            _badgeDict.Add(Count, badge);
         }
         //read
         public Dictionary<int,BadgeContent> GetBadgeList()
